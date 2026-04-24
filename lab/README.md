@@ -13,6 +13,6 @@
 5. [Experiment 5 – Docker Volumes, Environment Variables, Monitoring and Networks](lab/exp5/intro.md)  
 6. [Experiment 6 – Docker Run vs Docker Compose](lab/exp6/intro.md)  
 7. [Experiment 7 – CI/CD Pipeline using Jenkins, GitHub and Docker Hub](lab/exp7/intro.md)  
-8. [Experiment 8 – Ansible](lab/exp8/intro.md)  
+9. [Experiment 9 – Ansible](lab/exp9/intro.md)  
 
 ---
