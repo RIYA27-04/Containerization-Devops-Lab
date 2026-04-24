@@ -48,8 +48,7 @@ docker volume ls
 # Inspect volume
 docker volume inspect mydata
 ```
-![alt text](image2.png)
-
+![alt text](image-2.png)
 3. Bind Mounts (Host Directory)
 ```Bash
 # Create directory on host
@@ -66,7 +65,7 @@ docker exec web3 cat /app/data/host-file.txt
 # Shows: From Host
 ```
 
-![alt text](image3.png)
+![alt text](image-1.png)
 
 ### Lab 3: Practical Volume Examples
 Example 1: Database with Persistent Storage
@@ -117,7 +116,7 @@ docker run -d \
 # Test
 curl http://localhost:8080
 ```
-![alt text](image4.png)
+![alt text](image-3.png)
 
 Lab 4: Volume Management Commands
 ```Bash
@@ -140,7 +139,7 @@ docker volume rm volume-name
 docker cp local-file.txt container-name:/path/in/volume
 
 ```
-![alt text](image2.png)
+![alt text](image-4.png)
 
 
 ## Part 2: Environment Variables
@@ -183,7 +182,7 @@ docker run -d \
   --env-file .env.secrets \
   my-app
 ```
-![alt text](image7.png)
+![alt text](image-7.png)
 
 ### Method 3: In Dockerfile
 ```Bash
@@ -219,7 +218,7 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=debug_mode)
 ```
-![alt text](app.png)
+![alt text](image-5.png)
 
 ### Dockerfile with Environment Variables
 ```Bash
@@ -242,7 +241,7 @@ ENV DEBUG=false
 EXPOSE 5000
 CMD ["python", "app.py"]
 ```
-![alt text](docker.png)
+![alt text](image-6.png)
 ### Lab 3: Test Environment Variables
 ```Bash
 # Run with custom env vars
@@ -262,7 +261,7 @@ docker exec flask-app printenv DATABASE_HOST
 # Test the endpoint
 curl http://localhost:5000/config
 ```
-![alt text](image8.png)
+![alt text](image-8.png)
 ### Part 3: Docker Monitoring 
 ### Lab 1: Basic Monitoring Commands
 ### docker stats - Real-time Container Metrics
@@ -292,10 +291,7 @@ docker stats --format json --no-stream
 docker stats --no-stream --no-trunc
 
 ```
-![alt text](image9.png)
-
-![alt text](image10.png)
-
+![alt text](image-9.png)
 ### Lab 2: docker top - Process Monitoring
 ``` Bash
 # View processes in container
@@ -328,7 +324,7 @@ docker logs --since 2024-01-15 container-name
 # Combine options
 docker logs -f --tail 50 -t container-name
 ```
-![alt text](image11.png)
+![alt text](image-10.png)
 ### Lab 4: Container Inspection
 ```Bash
 # Detailed container info
@@ -414,7 +410,7 @@ docker run -d --name web2 --network my-network nginx
 # Containers can communicate using container names
 docker exec web1 curl http://web2
 ```
-![alt text](image12.png)
+![alt text](image-11.png)
 ### 2. Host Network
 ```Bash
 # Container uses host's network directly
@@ -425,7 +421,7 @@ docker run -d --name host-app --network host nginx
 # Access directly on host port 80
 curl http://localhost
 ```
-![alt text](image13.png)
+![alt text](image-12.png)
 
 ### 3. None Network
 ```Bash
@@ -436,15 +432,13 @@ docker run -d --name isolated-app --network none alpine sleep 3600
 docker exec isolated-app ifconfig
 
 ```
-![alt text](image14.png)
-
+![alt text](image-13.png)
 ### 4. Overlay Network (Swarm)
 ```Bash
 # For Docker Swarm multi-host networking
 docker network create --driver overlay my-overlay
 ```
-![alt text](image15.png)
-
+![alt text](image-14.png)
 ### Lab 3: Network Management Commands
 ```Bash
 # Create network
@@ -463,8 +457,8 @@ docker network rm network-name
 # Prune unused networks
 docker network prune
 ```
-![alt text](image17.png)
-
+![alt text](3.png)
+![alt text](image-15.png)
 ### Lab 4: Multi-Container Application Example
 Web App + Database Communication
 
@@ -513,7 +507,7 @@ docker exec container-name curl -I http://another-container
 # View network ports
 docker port container-name
 ```
-![alt text](image18.png)
+![alt text](image-17.png)
 
 ### Lab 6: Port Publishing vs Exposing
 ``` Bash
@@ -535,7 +529,7 @@ docker run -d -p 127.0.0.1:8080:80 --name app4 nginx
 # Dockerfile: EXPOSE 80
 # Still need -p to publish
 ```
-![alt text](image19.png)
+![alt text](image-18.png)
 
 ### Part 5: Complete Real-World Example
 Application Architecture:
@@ -584,8 +578,7 @@ docker run -d \
   --env-file .env.production \
   flask-app:latest
 ```
-![alt text](image16.png)
-
+![alt text](image-20.png)
 ```bash
 Monitoring commands 
 # Check all components
@@ -606,3 +599,4 @@ docker network inspect myapp-network
 ```
 ![alt text](image-21.png)
 ![alt text](image-19.png)
+![alt text](image-16.png)
