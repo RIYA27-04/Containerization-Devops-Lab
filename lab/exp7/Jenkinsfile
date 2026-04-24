@@ -14,27 +14,15 @@ pipeline {
             }
         }
 
-<<<<<<< HEAD
-    stage('Login to Docker Hub') {
-        steps {
-            withCredentials([string(credentialsId: 'dockerhub-token', variable: 'DOCKER_TOKEN')]) {
-                sh """
-                    echo "${DOCKER_TOKEN}" | docker login -u riya2704 --password-stdin
-                """
+        stage('Login to Docker Hub') {
+            steps {
+                withCredentials([string(credentialsId: 'dockerhub-token', variable: 'DOCKER_TOKEN')]) {
+                    sh '''
+                        printenv DOCKER_TOKEN | docker login -u riya2704 --password-stdin
+                    '''
+                }
             }
         }
-    }
-=======
-        stage('Login to Docker Hub') {
-    steps {
-        withCredentials([string(credentialsId: 'dockerhub-token', variable: 'DOCKER_TOKEN')]) {
-            sh '''
-                printenv DOCKER_TOKEN | docker login -u riya2704 --password-stdin
-            '''
-        }
-    }
-}
->>>>>>> 1e00e6d (Update Jenkins setup and pipeline)
 
         stage('Push to Docker Hub') {
             steps {
