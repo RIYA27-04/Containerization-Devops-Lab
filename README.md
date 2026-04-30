@@ -17,8 +17,8 @@
 6. [Experiment 6 – Docker Run vs Docker Compose](lab/exp6/intro.md)  
 7. [Experiment 7 – CI/CD Pipeline using Jenkins, GitHub and Docker Hub](lab/exp7/intro.md)  
 9. [Experiment 8 – Ansible](lab/exp9/intro.md)
-10. [Experiment 10 - SonarQube](lab/exp10\intro.md)
-11. [Experiment 11 - Docker Swarm](lab\exp11\intro.md)
-12. [Experiment 12 - Container Orechestration using Kubernetes](lab\exp12\intro.md)
+10. [Experiment 10 - SonarQube](lab/exp10/intro.md)
+11. [Experiment 11 - Docker Swarm](lab/exp11/intro.md)
+12. [Experiment 12 - Container Orechestration using Kubernetes](lab/exp12/intro.md)
 
 ---
