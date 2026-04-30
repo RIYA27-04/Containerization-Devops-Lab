@@ -1,7 +1,7 @@
 # Experiment 6: Comparison of Docker Run and Docker Compose
 
-**Name:** Mayank Thakur
-**Roll No:** R2142230924
+**Name:** Riya jain
+
 **Course:** Containerization and DevOps Lab
 **Experiment No:** 6
 
