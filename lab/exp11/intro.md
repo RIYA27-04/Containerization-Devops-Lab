@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Experiment 11: Orchestration using Docker Compose & Docker Swarm
 
 **Name:** Riya Jain

@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Experiment 12: Study and Analyse Container Orchestration using Kubernetes
 
 **Name:** Riya Jain  

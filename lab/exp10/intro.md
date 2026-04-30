@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Experiment 10: SonarQube — Static Code Analysis
 
 **Name:** Riya Jain
